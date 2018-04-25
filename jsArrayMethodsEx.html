@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Examples</title>
+
+
+
+	<script type="text/javascript">
+		
+		var students = ["Prashant","Hem","Sooraj","Hardik","Kishan"];
+		var nwArr	 = ["Chirag","Aman","Mohit"];
+		var ages	 = [25,44,45,35,22];
+
+
+		// concat function
+		function conct(){
+
+			var cn = students.concat(nwArr);
+			document.getElementById('output').innerHTML = cn;
+		}
+
+		// copy within
+		function cw(){
+
+			//var cn = copy
+			document.getElementById('output').innerHTML = students.copyWithin(2,0);
+
+			// copy within here 2 stands for elements and 0 stands for value to replace
+		}
+
+	// Entries
+		function ent(){
+
+			var x = students.entries();
+			document.getElementById('output').innerHTML = x.next().value;
+
+			// entries `used to make sure that the itertion of the data where it shows the value from the 0 (Key/value) - pair
+		}
+
+// function check adult value
+		function checkAdult(age) {
+			
+				return age <=45;
+		}
+
+
+
+	// Every
+		function evry(){
+
+			document.getElementById('output').innerHTML = ages.every(checkAdult);
+			// every is used to check the per1ticulr value is if greater than a specified parameter on not for this purpose we have used checkadult Function
+
+		}
+		// Fill
+		function fl(){
+
+
+			// check the value which has given the age grater than 18
+			
+		document.getElementById('output').innerHTML = students.fill("Random Name ");
+			// fill method fills all the values of an array with the same value here given
+
+		}
+	// Filter
+		function fltr(){
+
+
+			// check the value which has given the age grater than 18
+			
+		document.getElementById('output').innerHTML = ages.filter(checkAdult);
+			// fill method fills all the values of an array with the same value here given
+
+		}
+
+		// Find the next first value of the given param if it matches 
+		function fnd(){
+
+
+			// check the value which has given the age grater than 18
+			
+		document.getElementById('output').innerHTML = ages.find(checkAdult);
+			// fill method fills all the values of an array with the same value here given
+
+		}
+
+// Find the next index first value of the given param if it matches 
+		function fndIndex(){
+
+
+			// check the value which has given the age grater than 18
+			
+		document.getElementById('output').innerHTML = ages.findIndex(checkAdult);
+			// fill method fills all the values of an array with the same value here given
+
+		}
+
+
+	// add values `function for foreach
+	
+	function addValues(index,item) {
+			
+				otpt = document.getElementById('output');
+				otpt.innerHTML = otpt.innerHTML+"Index["+item+"]: "+index+"<br />";
+		}	
+
+//from
+	
+	function frm(){
+			
+				var str = Array.from("Prashant");
+				document.getElementById('output').innerHTML = str;
+
+				
+		}			
+
+// include 
+	function incld(){
+			
+				// checks whether the specific param is in array or not
+				var n = students.includes("Prashant");
+				document.getElementById('output').innerHTML = n;
+
+				
+		}			
+
+		// index of 
+	function indxof(){
+				
+				// returns the index position of the specific param
+				var n = students.indexOf("Sooraj");
+				document.getElementById('output').innerHTML = n;
+
+				
+		}		
+// index of 
+	function isArr(){
+				
+
+				// returns the index position of the specific param
+				var n = Array.isArray(students);
+				document.getElementById('output').innerHTML = n;
+
+				
+		}	
+
+// join
+	function jn(){
+				
+
+				// returns join value of an array i string
+				// opposite of from
+				//var n = Array.isArray(students);
+				document.getElementById('output').innerHTML ="\""+students.join()+"\"";
+
+				
+		}
+
+// jkeys
+	function kys(){
+				
+
+		x = students.keys();
+		document.getElementById('output').innerHTML =x.next().value;
+
+				
+		}	
+
+// last index of
+	function lstindxof(){
+				
+
+		x = students.lastIndexOf("Sooraj");
+		document.getElementById('output').innerHTML =x;
+
+				
+		}
+
+// map 		
+function mp(){
+				
+		// returns the math in map function just like sqrt and all that
+		x = ages.map(Math.sqrt);
+		document.getElementById('output').innerHTML =x;
+
+				
+		}	
+// pop		
+function p(){
+				
+		// rmoves last elements of an array
+		x = students.pop();
+		document.getElementById('output').innerHTML =students;
+
+				
+		}
+
+			// push
+function ps(){
+				
+		// put last elements in an array
+		x = students.push("Here I go.");
+		document.getElementById('output').innerHTML =students;
+
+				
+		}	
+
+// get total random func
+
+	function getTotal(total,num) {
+		
+			return total+Math.round(num);
+	}
+
+function reds(item){
+				
+		// rmoves last elements of an array
+		x = ages.reduce(getTotal,0);
+		document.getElementById('output').innerHTML =x;
+
+				
+		}
+
+			// reverse
+function rvs(){
+				
+		// reverse an array
+		x = students.reverse();
+		document.getElementById('output').innerHTML =x;
+
+				
+		}	
+
+			// Shift
+	function shft(){
+				
+		// remove first element of an array
+		x = students.shift();
+		document.getElementById('output').innerHTML =students;
+
+				
+		}	
+
+		// slice
+	function slc(){
+				
+		// cut an array and makes new array
+		demo = students.slice(1,3);
+		document.getElementById('output').innerHTML =demo;
+
+				
+		}		
+
+	function sm(){
+				
+		// cut an array and makes new array
+		//demo = students.slice(1,3);
+		document.getElementById('output').innerHTML =ages.some(checkAdult);
+
+				
+		}	
+function sm(){
+				
+		// cut an array and makes new array
+		//demo = students.slice(1,3);
+		document.getElementById('output').innerHTML =ages.some(checkAdult);
+
+				
+		}
+		// sort 	
+function srt(){
+				
+		// sort an array in ascending order
+		//demo = students.slice(1,3);
+		document.getElementById('output').innerHTML =students.sort();
+
+				
+		}	
+		// splice 	
+function splc(){
+				
+		// sllice replace the values from given num to given num 
+		demo = students.splice(1,3,"Om","Shanti"); // 1 and 3 place , om & shanti value
+		document.getElementById('output').innerHTML =demo;
+
+				
+		}		
+// splice 	
+function toStr(){
+				
+		// covert to string
+		demo = students.toString();
+		
+		x = Array.isArray();
+		document.getElementById('output').innerHTML =demo+" Check :"+x;
+				
+		}
+
+// unshift
+	function unshft(){
+				
+		// to add the value in the begininig of an array
+		students.unshift("Abc","def");
+		
+		//x = Array.isArray();
+		document.getElementById('output').innerHTML =students;
+				
+		}
+	
+function valof(){
+				
+		// to add the value in the begininig of an array
+		students.valueOf();
+		
+		//x = Array.isArray();
+		document.getElementById('output').innerHTML =students;
+				
+		}
+	
+
+	</script>
+</head>
+<body style="font-family: calibri;font-size: 1em;">
+
+			<h1>Example</h1>
+			<hr>
+
+			<button onclick="conct()">Concat</button>
+			<button onclick="cw()">Copy Within</button>
+			<button onclick="ent()">Entries</button>
+			
+
+			<br>
+			<h3>Imp Methods</h3>
+			<button onclick="evry()">Every</button>		
+			<button onclick="fl()">Fill</button>
+			<button onclick="fltr()">Filter</button>				
+			<button onclick="fnd()">Find</button>	
+			<button onclick="fndIndex()">Find Index</button>	
+			<!-- foreach -->
+			<button onclick="ages.forEach(addValues)">Foreach</button>	
+			<!-- from Creates an array from string -->
+			<button onclick="frm()">From</button>
+			<button onclick="incld()">Includes</button>
+			<button onclick="indxof()">IndexOf</button>
+			<button onclick="isArr()">Is Array</button>
+			<button onclick="jn()">Join</button>
+			<button onclick="kys()">Keys</button>
+			<button onclick="lstindxof()">Last Index of</button>
+			<button onclick="mp()">Map</button>
+			<button onclick="p()">Pop</button>
+			<button onclick="ps()">Push</button>
+			<button onclick="reds()">reduce</button>
+			<button onclick="rvs()">Reverse </button>
+			<button onclick="shft()">Shift </button>
+			<button onclick="slc()">Slice </button>
+			<button onclick="sm()">Some</button>
+			<button onclick="srt()">Sort</button>
+			<br><br>
+			<button onclick="splc()">Splice</button>
+			<button onclick="toStr()">To string</button>
+			<button onclick="unshft()">Unshift</button>
+			<button onclick="valof()">value Of</button>
+
+
+
+			<!-- output demo -->
+			<div id="output"></div>
+
+</body>
+</html>

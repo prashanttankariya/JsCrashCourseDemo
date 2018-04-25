@@ -1,0 +1,25 @@
+
+
+
+							JAVASCRIPT
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		BASIC:
+			
+			1) INTRODUCTION
+			2)  SETTING UP BROWSER AND EDITOR
+					- chrome , and any editor
+			3) VARIABLE AND DATA TYPES
+					- number,string,boolean,undefinied,null
+			4) VARIABLE MUTATION AND TYPE COERCION
+					- convert value from number to boolean while concatenate
+			5) operators
+				references:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+			6) if / else statement
+			7) Boolean and logical 
+			8) functions
+			9) Statements and Expressions
+			10) Arrays
+			11) Object
+			12) Object and Methods
